@@ -15,7 +15,7 @@
 
 この記事では、最新のAI技術を用いて動体検知を行います。具体的にはDAMO-YOLOについて解説・実装していきます。上記の1~3はカバーしません。
 
-![](DAMO-YOLO/assets/eye-catch.png)
+![](https://raw.githubusercontent.com/yKesamaru/Motion_Detection_YOLO/refs/heads/master/DAMO-YOLO/assets/eye-catch.png)
 
 ## 動作環境
 ```bash
@@ -234,8 +234,6 @@ python tools/demo.py video \
 
 この方法で`demo.py`を動作させると`demo/`ディレクトリに処理済みの動画ファイルが作成されます。
 
-https://www.youtube.com/watch?v=upXQ8RjYVH4
-
 #### リアルタイム処理
 `demo.py`はリアルタイム処理を想定した処理が書かれていますが、`argparse`モジュールのブール型引数の扱いに誤りがあるため期待通りの動作になりません。[^1]
 [^1]: （このようなリポジトリにありがち。学習済みモデルの`coming soon!`は絶対に追加されないし、メインの処理以外はバグで動かない。）
@@ -356,6 +354,7 @@ parser.add_argument('--no_save_result', action='store_false', dest='save_result'
 ## 出力結果
 ### 一括処理
 https://youtu.be/upXQ8RjYVH4
+
 ### リアルタイム処理
 https://youtu.be/QUjVKslHcMQ
 
