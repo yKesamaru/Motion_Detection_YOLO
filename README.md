@@ -128,12 +128,6 @@ mkdir -p pretrained_models
 wget https://idstcv.oss-cn-zhangjiakou.aliyuncs.com/DAMO-YOLO/release_model/clean_model_0317/damoyolo_tinynasL20_T_420.pth -P pretrained_models/
 ```
 
-<!-- #### Pythonパスの設定
-DAMO-YOLOのルートディレクトリで実行。
-```bash
-export PYTHONPATH=$PYTHONPATH:$(pwd)
-``` -->
-
 #### オプションの確認
 ```bash
 (venv) user@user:~/ドキュメント/Motion_Detection/DAMO-YOLO$ python tools/demo.py --help
