@@ -1,0 +1,36 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python デバッガー: 現在のファイル",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "python": "/home/terms/ドキュメント/Motion_Detection_YOLO/DAMO-YOLO/bin/python3",
+            "cwd": "/home/terms/ドキュメント/Motion_Detection_YOLO/DAMO-YOLO",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "demo.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/home/terms/ドキュメント/Motion_Detection_YOLO/DAMO-YOLO/tools/demo.py",
+            "python": "/home/terms/ドキュメント/Motion_Detection_YOLO/DAMO-YOLO/bin/python3",
+            "cwd": "/home/terms/ドキュメント/Motion_Detection_YOLO/DAMO-YOLO",
+            "console": "integratedTerminal",
+            "args": [
+                "video",
+                "-f", "./configs/damoyolo_tinynasL20_T.py",
+                "--engine", "pretrained_models/damoyolo_tinynasL20_T_420.pth",
+                "--path", "assets/input_1.mp4",
+                "--conf", "0.5",
+                "--no_save_result",
+                "--device", "cuda",
+                "--infer_size", "640", "640"
+            ]
+        }
+    ]
+}
