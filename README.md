@@ -15,7 +15,7 @@
 
 この記事では、最新のAI技術を用いて動体検知を行います。具体的にはDAMO-YOLOについて解説・実装していきます。
 
-![](https://raw.githubusercontent.com/yKesamaru/Motion_Detection/refs/heads/master/assets/eye-catch-2.png)
+![](DAMO-YOLO/assets/eye-catch.png)
 
 ## 動作環境
 ```bash
@@ -200,7 +200,7 @@ def vis(img, boxes, scores, cls_ids, conf=0.5, class_names=None):
 
 #### 実行対象画像
 
-![](DAMO-YOLO/assets/input.png)
+![](https://raw.githubusercontent.com/yKesamaru/Motion_Detection_YOLO/refs/heads/master/DAMO-YOLO/assets/input.png)
 
 #### 実行
 #### 画像ファイル処理
@@ -213,7 +213,7 @@ Inference with torch engine!
 save visualization results at ./demo/dog.jpg
 ```
 
-![](DAMO-YOLO/assets/output.png)
+![](https://raw.githubusercontent.com/yKesamaru/Motion_Detection_YOLO/refs/heads/master/DAMO-YOLO/assets/output.png)
 
 #### 動画ファイル処理
 `DAMO-YOLO`の強みはリアルタイム性です。ここでは用意したmp4ファイルを入力として`demo.py`に処理を投げます。
@@ -370,7 +370,7 @@ https://youtu.be/QUjVKslHcMQ
 
 `DAMO-YOLO`には[産業用の学習済みモデルも配布されています](https://github.com/tinyvision/DAMO-YOLO)。
 
-![](assets/2024-11-14-21-42-24.png)
+![](https://raw.githubusercontent.com/yKesamaru/Motion_Detection/refs/heads/master/assets/2024-11-14-21-42-24.png)
 
 `DAMO-YOLO`で人物だけを「顔認証」することも可能です。
 また、マスクを学習させたモデルと帽子を追加学習させれば「怪しい人」だけを検知することもできます。
