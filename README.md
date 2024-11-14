@@ -372,7 +372,7 @@ https://youtu.be/QUjVKslHcMQ
 
 `DAMO-YOLO`には[産業用の学習済みモデルも配布されています](https://github.com/tinyvision/DAMO-YOLO)。
 
-![](https://raw.githubusercontent.com/yKesamaru/Motion_Detection/refs/heads/master/assets/2024-11-14-21-42-24.png)
+![](https://raw.githubusercontent.com/yKesamaru/Motion_Detection_YOLO/refs/heads/master/assets/2024-11-14-21-42-24.png)
 
 `DAMO-YOLO`で人物だけを「顔認証」することも可能です。
 また、マスクを学習させたモデルと帽子を追加学習させれば「怪しい人」だけを検知することもできます。
