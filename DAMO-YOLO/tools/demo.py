@@ -84,7 +84,7 @@ class Infer():
         elif engine_type == 'tensorRT':
             model = self.build_tensorRT_engine(self.ckpt_path)
         elif engine_type == 'onnx':
-            model, self.input_name, self.infer_size, _, _ = self.build_onnx_engine(self.ckpt_path)
+            model, self.input_name, self.infer_size, _, _ = self.build_onnx_engine(onnx_path=self.ckpt_path)
         else:
             NotImplementedError(f'{engine_type} is not supported yet! Please use one of [onnx, torch, tensorRT]')
 
