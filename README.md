@@ -382,7 +382,7 @@ https://youtu.be/QUjVKslHcMQ
 
 最初に完成したプログラムの出力をみてみましょう。
 
-![](assets/output.gif)
+![](https://raw.githubusercontent.com/yKesamaru/Motion_Detection_YOLO/refs/heads/master/assets/output.gif)
 
 - 標準出力
   ```bash
@@ -412,7 +412,7 @@ https://youtu.be/QUjVKslHcMQ
 - [新しい畳み込み演算CDCによる堅牢なFace Anti-spoofing（なりすまし防止）モデル ](https://ai-scholar.tech/articles/face-recognition/cdcn-for-face-anfi-spoofing?utm_source=chatgpt.com)
 - [顔認証の時、本人がその場にいるか写真かを判定する技術](https://www.fujitsu.com/jp/about/research/techguide/list/antispoofing/?utm_source=chatgpt.com)
 
-![3D Mask Face Anti-Spoofing (P C Yuen et al.)](assets/2024-12-03-10-40-23.png)
+![3D Mask Face Anti-Spoofing (P C Yuen et al.)](https://raw.githubusercontent.com/yKesamaru/Motion_Detection_YOLO/refs/heads/master/assets/2024-12-03-10-40-23.png)
 
 しかしながら、**必ずしも新規技術を開発する必要はない**のではないかとも思います。というのも、紙にプリントされた顔の場合、紙を持つ手や紙そのものを検出できればいいわけです。あるいはプリントされた顔画像は目の動きや顔の角度が不変なので、それを検出する方法は複数あり、実際に実装した例を記事としてだしてます。
 
@@ -427,7 +427,7 @@ https://youtu.be/QUjVKslHcMQ
 それではスマホに写した顔画像や顔動画はどうでしょうか？
 この場合はスマホそれ自体を検出できればいいわけです。**スマホの座標と顔の座標を計算し、スマホ座標の内側に顔座標があれば、それはスマホで表示した顔である**、と分かるわけです。
 
-![](assets/rect8752.png)
+![](https://raw.githubusercontent.com/yKesamaru/Motion_Detection_YOLO/refs/heads/master/assets/rect8752.png)
 
 この記事では**顔とスマートフォンを検出し、座標を返すプログラム**を考えていきます。
 
@@ -438,8 +438,8 @@ FACE01とはコミュニティライセンスの顔認証フレームワーク�
 
 https://github.com/yKesamaru/FACE01_DEV
 
-![](assets/eye-catch.png)
-![](assets/none-fs8.png)
+![](https://raw.githubusercontent.com/yKesamaru/Motion_Detection_YOLO/refs/heads/master/assets/eye-catch.png)
+![](https://raw.githubusercontent.com/yKesamaru/Motion_Detection_YOLO/refs/heads/master/assets/none-fs8.png)
 
 FACE01では、内部のジェネレーターによって、入力動画の1フレームずつに様々な情報が付与されたオブジェクトが取り出せます。顔の座標、信頼度、類似度、人名ほか、色々な情報が次々と得られるわけです。
 
@@ -453,6 +453,7 @@ for i in range(0, 100):
 ```
 この中には`numpy`形式の画像そのものも含まれるわけですが、これを`DAMO-YOLO`の学習済みモデルに渡して、何が写っていたか情報をえる、という方法をとります。
 
+## Inferモジュールの実装
 `demo.py`を参考に、`Inferクラス`としてモジュール化したスクリプトを`base.py`として作成しました。
 ```python: base.py
 """
@@ -859,9 +860,10 @@ if __name__ == '__main__':
     main(exec_times=200)
 ```
 
+## 動作確認
 このエグザンプルスクリプトを動作させると、記事冒頭で紹介しているウィンドウがリアルタイムで表示されます。
 
-![](assets/output.gif)
+![](https://raw.githubusercontent.com/yKesamaru/Motion_Detection_YOLO/refs/heads/master/assets/output.gif)
 
 - 標準出力
   ```bash
